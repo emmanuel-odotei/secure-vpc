@@ -71,7 +71,7 @@ Resources:
     Type: AWS::EC2::EIP
     Properties:
       Domain: vpc
-      DependsOn: AttachGateway
+    DependsOn: AttachGateway
 
   # NAT Gateway in Public Subnet for Private Subnet to access the internet
   NATGateway:
@@ -206,9 +206,7 @@ Resources:
         - Key: Name
           Value: PrivateInstance
 
-
 # OUTPUTS SECTION (optional, for convenience)
-
 Outputs:
   PublicInstanceId:
     Description: Instance ID of the Public Web Server
